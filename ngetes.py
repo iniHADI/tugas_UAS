@@ -101,7 +101,7 @@ def main():
     labels, cluster_centers = run_kmeans(n_clusters, X)
 
     # Menampilkan dataset asli dengan label cluster yang ditetapkan
-    original_data = pd.DataFrame(X, columns=['PAYMENTS', 'CREDIT_LIMIT'])
+    original_data = pd.DataFrame(X, columns=['BALANCE','BALANCE_FREQUENCY','PURCHASES','INSTALLMENTS_PURCHASES','CASH_ADVANCE','PURCHASES_FREQUENCY','ONEOFF_PURCHASES_FREQUENCY','CASH_ADVANCE_FREQUENCY','CASH_ADVANCE_TRX','PURCHASES_TRX','CREDIT_LIMIT','PAYMENTS','MINIMUM_PAYMENTS','PRC_FULL_PAYMENT','TENURE'])
     original_data['Cluster'] = labels
     st.subheader("Dataset Asli dengan Label Cluster:")
     st.write(original_data)
