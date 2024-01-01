@@ -91,7 +91,7 @@ def main():
 
     # Generate a sample dataset
     X, _ = make_blobs(n_samples=300, centers=4, cluster_std=1.0, random_state=42)
-    X = pd.DataFrame(X, columns=['PAYMENTS','MINIMUM_PAYMENTS','CREDIT_LIMIT'])
+    X = pd.DataFrame(X, columns=['PAYMENTS','CREDIT_LIMIT'])
     # Menampilkan dataset secara menyeluruh
     st.subheader("Dataset:")
     st.write(X)
@@ -100,7 +100,7 @@ def main():
     labels, cluster_centers = run_kmeans(n_clusters, X)
 
     # Menampilkan dataset asli dengan label cluster yang ditetapkan
-    original_data = pd.DataFrame(X, columns=['PAYMENTS','MINIMUM_PAYMENTS','CREDIT_LIMIT'])
+    original_data = pd.DataFrame(X, columns=['PAYMENTS','CREDIT_LIMIT'])
     original_data['Cluster'] = labels
     st.subheader("Dataset Asli dengan Label Cluster:")
     st.write(original_data)
