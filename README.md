@@ -112,15 +112,15 @@ data discovery :
 ```
 df.head()
 ```
-![image](<../tugas uas ml/head.1.png>)
+![image](head.1.png)
 ```
 df.info()
 ```
-![image](<../tugas uas ml/info.1.png>)
+![image](info.1.png)
 ```
 df.describe().T.style.background_gradient(cmap = 'Spectral')
 ```
-![image](<../tugas uas ml/describe.1.png>)
+![image](describe.1.png)
 ```
 df.shape
 ```
@@ -129,7 +129,7 @@ Exploratory Data Analysis
 ```
 pip install sweetviz
 ```
-![image](<../tugas uas ml/sweetviz.png>)
+![image](sweetviz.png)
 
 ```
 import sweetviz as sv
@@ -137,35 +137,35 @@ import sweetviz as sv
 report = sv.analyze(df)
 report.show_notebook()
 ```
-![image](<../tugas uas ml/eda sweetviz.1.png>)
-![image](<../tugas uas ml/eda sweetviz.2.png>)
-![image](<../tugas uas ml/eda sweetviz.3.png>)
-![image](<../tugas uas ml/eda sweetviz.4.png>)
-![image](<../tugas uas ml/eda sweetviz.5.png>)
+![image](eda sweetviz.1.png)
+![image](eda sweetviz.2.png)
+![image](eda sweetviz.3.png)
+![image](eda sweetviz.4.png)
+![image](eda sweetviz.5.png)
 
 ```
 sns.regplot(data = df, y = 'CREDIT_LIMIT', x = 'TENURE')
 ```
-![image](<../tugas uas ml/credit limitxtenure.png>)
+![image](credit limitxtenure.png)
 
 ```
 sns.regplot(data = df, y = 'CREDIT_LIMIT', x = 'PAYMENTS')
 ```
-![image](<../tugas uas ml/credit limitxpayment.png>)
+![image](credit limitxpayment.png)
 
 ```
 df.boxplot()
 plt.xticks(rotation=90)
 plt.show()
 ```
-![image](<../tugas uas ml/boxplot.png>)
+![image](boxplot.png)
 
 ```
 fig = plt.figure(figsize = (15,15))
 sns.heatmap(df.corr(), cmap = 'Blues', square = True, annot = True, linewidths = 0.5) 
 ```
-![image](<../tugas uas ml/heatmap.1.png>)
-![image](<../tugas uas ml/heatmap.2.png>)
+![image](heatmap.1.png)
+![image](heatmap.2.png)
 
 Data preprocessing
 
@@ -173,13 +173,13 @@ Data preprocessing
 df.dropna(inplace=True)
 df.isnull().sum()
 ```
-![image](<../tugas uas ml/d.pre.1.png>)
+![image](d.pre.1.png)
 
 ```
 df= df.drop(columns=['ONEOFF_PURCHASES', 'PURCHASES_INSTALLMENTS_FREQUENCY','CUST_ID'],axis=1)
 df.head()
 ```
-![image](<../tugas uas ml/d.pre.2.png>)
+![image](d.pre.2.png)
 
 ```
 scaler = StandardScaler()
@@ -200,7 +200,7 @@ plt.ylabel('Sum_of_squared_distances')
 plt.title('Elbow Method For Optimal k')
 plt.show()
 ```
-![image](<../tugas uas ml/tes.1.png>)
+![image](tes.1.png)
 
 ```
 kmeans = KMeans()
@@ -208,7 +208,7 @@ elbow = KElbowVisualizer(kmeans, k=(1, 15))
 elbow.fit(scaled_df)
 elbow.show()
 ```
-![image](<../tugas uas ml/tes.2.png>)
+![image](tes.2.png)
 
 ```
 kmeans = KMeans(n_clusters=4).fit(scaled_df)
@@ -217,7 +217,7 @@ kmeans.cluster_centers_
 kmeans.labels_
 scaled_df[0:5]
 ```
-![image](<../tugas uas ml/cluster=4.png>)
+![image](cluster=4.png)
 
 ```
 clusters_kmeans = kmeans.labels_
@@ -226,15 +226,15 @@ df["Labels"] = clusters_kmeans
 
 df.head()
 ```
-![image](<../tugas uas ml/labels.png>)
+![image](labels.png)
 
 ```
 df['Labels'].value_counts()
 ```
-![image](<../tugas uas ml/labels value.png>)
+![image](labels value.png)
 
 ### Deployment 
 Model yang sudah di buat di deploy menggunakan streamlit: 
 Link Aplikasi: [ccdata](https://tugasuas-9rod9a5sun6raunwjrt6zx.streamlit.app/).
 
-![image](<../tugas uas ml/foto apk.png>)
+![image](foto apk.png)
