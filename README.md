@@ -137,21 +137,21 @@ import sweetviz as sv
 report = sv.analyze(df)
 report.show_notebook()
 ```
-![image](eda sweetviz.1.png)
-![image](eda sweetviz.2.png)
-![image](eda sweetviz.3.png)
-![image](eda sweetviz.4.png)
-![image](eda sweetviz.5.png)
+![image](s1.png)
+![image](s2.png)
+![image](s3.png)
+![image](s4.png)
+![image](s5.png)
 
 ```
 sns.regplot(data = df, y = 'CREDIT_LIMIT', x = 'TENURE')
 ```
-![image](credit limitxtenure.png)
+![image](clxt.png)
 
 ```
 sns.regplot(data = df, y = 'CREDIT_LIMIT', x = 'PAYMENTS')
 ```
-![image](credit limitxpayment.png)
+![image](clxp.png)
 
 ```
 df.boxplot()
@@ -231,10 +231,10 @@ df.head()
 ```
 df['Labels'].value_counts()
 ```
-![image](labels value.png)
+![image](lv.png)
 
 ### Deployment 
 Model yang sudah di buat di deploy menggunakan streamlit: 
 Link Aplikasi: [ccdata](https://tugasuas-9rod9a5sun6raunwjrt6zx.streamlit.app/).
 
-![image](foto apk.png)
+![image](apk.png)
