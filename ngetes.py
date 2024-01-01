@@ -91,7 +91,7 @@ def main():
 
     # Generate a sample dataset
     X, _ = make_blobs(n_samples=300, centers=4, cluster_std=1.0, random_state=42)
-    X = pd.DataFrame(X, columns=['BALANCE','BALANCE_FREQUENCY','PURCHASES','INSTALLMENTS_PURCHASES','CASH_ADVANCE','PURCHASES_FREQUENCY','ONEOFF_PURCHASES_FREQUENCY','CASH_ADVANCE_FREQUENCY','CASH_ADVANCE_TRX','PURCHASES_TRX','CREDIT_LIMIT','PAYMENTS','MINIMUM_PAYMENTS','PRC_FULL_PAYMENT','TENURE'])
+    X = pd.DataFrame(X, columns=['CREDIT_LIMIT','PAYMENTS','TENURE'])
     # Menampilkan dataset secara menyeluruh
     st.subheader("Dataset:")
     st.write(X)
